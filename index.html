@@ -64,32 +64,36 @@
         cursor: pointer;
       }
 
+      .text-color-gray-950 {
+        color: var(--clr-gray-950);
+      }
+
+      .text-color-gray-500 {
+        color: var(--clr-gray-500);
+      }
+
       .text-preset-1 {
         font-family: 'Figtree', sans-serif;
         font-size: 1.25rem;
         line-height: 1.5;
-        color: var(--clr-gray-950);
       }
 
       .text-preset-2 {
         font-family: 'Figtree', sans-serif;
         font-size: 1rem;
         line-height: 1.5;
-        color: var(--clr-gray-950);
       }
 
       .text-preset-3 {
         font-family: 'Figtree', sans-serif;
         font-size: 0.875rem;
         line-height: 1.5;
-        color: var(--clr-gray-950);
       }
 
       .text-preset-4 {
         font-family: 'Figtree', sans-serif;
         font-size: 0.75rem;
         line-height: 1.5;
-        color: var(--clr-gray-950);
       }
 
       .w-84 {
@@ -140,6 +144,16 @@
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
+
+      @media screen and (min-width: 768px) {
+        .text-preset-3 {
+          font-size: 1rem;
+        }
+
+        .text-preset-4 {
+          font-size: 0.875rem;
+        }
+      }
     </style>
   </head>
   <body
@@ -147,7 +161,7 @@
   >
     <main>
       <div
-        class="card w-327px p-6 border border-gray-950 rounded-25 bg-white flex flex-col gap-6"
+        class="card w-327px md:w-96 p-6 border border-gray-950 rounded-25 bg-white flex flex-col gap-6"
         role="article"
         aria-labelledby="cardTitle"
       >
@@ -158,21 +172,21 @@
         />
         <div class="flex flex-col gap-3">
           <span
-            class="w-min p-leanring bg-yellow rounded text-preset-4 font-extrabold"
+            class="w-min p-leanring bg-yellow rounded text-preset-4 text-color-gray-950 font-extrabold"
             >Learning</span
           >
           <time
             datetime="2023-12-21"
-            class="text-preset-4 font-medium w-min whitespace-nowrap"
+            class="text-preset-4 text-color-gray-950 font-medium w-min whitespace-nowrap"
             >Published 21 Dec 2023
           </time>
           <h1
             id="cardTitle"
-            class="text-preset-1 font-extrabold whitespace-nowrap"
+            class="text-preset-1 text-color-gray-950 font-extrabold whitespace-nowrap"
           >
             HTML & CSS foundations
           </h1>
-          <p class="text-preset-3 font-medium">
+          <p class="text-preset-3 text-color-gray-500 font-medium">
             These languages are the backbone of every website, defining
             structure, content, and presentation.
           </p>
