@@ -14,28 +14,186 @@
 
     <title>Frontend Mentor | Blog preview card</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @font-face {
+        font-family: 'Figtree';
+        src: url('./assets/fonts/Figtree-VariableFont_wght.ttf')
+          format('truetype');
+        font-weight: 100 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Figtree';
+        src: url('./assets/fonts/Figtree-Italic-VariableFont_wght.ttf')
+          format('truetype');
+        font-weight: 100 900;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      :root {
+        --clr-yellow: #f4d04e;
+        --clr-gray-950: #111111;
+        --clr-gray-500: #6b6b6b;
+        --clr-white: #ffffff;
+        --spacing-300: 1.5rem;
+        --spacing-150: 0.75rem;
+        --spacing-100: 0.5rem;
+        --spacing-50: 0.25rem;
+      }
+
+      .font-figtree {
+        font-family: 'Figtree', sans-serif;
+      }
+
+      .bg-yellow {
+        background-color: var(--clr-yellow);
+      }
+
+      .text-yellow {
+        color: var(--clr-yellow);
+      }
+
+      h1.text-preset-1:hover {
+        color: var(--clr-yellow);
+        cursor: pointer;
+      }
+
+      .text-preset-1 {
+        font-family: 'Figtree', sans-serif;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: var(--clr-gray-950);
+      }
+
+      .text-preset-2 {
+        font-family: 'Figtree', sans-serif;
+        font-size: 1rem;
+        line-height: 1.5;
+        color: var(--clr-gray-950);
+      }
+
+      .text-preset-3 {
+        font-family: 'Figtree', sans-serif;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: var(--clr-gray-950);
+      }
+
+      .text-preset-4 {
+        font-family: 'Figtree', sans-serif;
+        font-size: 0.75rem;
+        line-height: 1.5;
+        color: var(--clr-gray-950);
+      }
+
+      .w-84 {
+        width: 21rem;
+      }
+
+      .w-279px {
+        width: 279px;
+      }
+
+      .w-327px {
+        width: 327px;
+      }
+
+      .h-50 {
+        height: 12.5rem; /* 200px */
+      }
+
+      .p-leanring {
+        padding: var(--spacing-50) var(--spacing-150);
+      }
+
+      .border-gray-950 {
+        border-color: var(--clr-gray-950);
+      }
+
+      .rounded-12 {
+        border-radius: 0.625rem;
+      }
+
+      .rounded-25 {
+        border-radius: 1.25rem;
+      }
+
+      .clr-gray-950 {
+        color: var(--clr-gray-950);
+      }
+
+      .clr-gray-500 {
+        color: var(--clr-gray-500);
+      }
+
       .attribution {
         font-size: 11px;
         text-align: center;
       }
+
       .attribution a {
         color: hsl(228, 45%, 44%);
       }
     </style>
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    Learning Published 21 Dec 2023 HTML & CSS foundations These languages are
-    the backbone of every website, defining structure, content, and
-    presentation. Greg Hooper
-
-    <div class="attribution">
+  <body
+    class="font-figtree w-screen h-screen bg-yellow flex justify-center items-center"
+  >
+    <main>
+      <div
+        class="card w-327px p-6 border border-gray-950 rounded-25 bg-white flex flex-col gap-6"
+        role="article"
+        aria-labelledby="cardTitle"
+      >
+        <img
+          src="./assets/images/illustration-article.svg"
+          alt="An abstract illustration representing HTML & CSS concepts"
+          class="block h-50 rounded-12 object-cover"
+        />
+        <div class="flex flex-col gap-3">
+          <span
+            class="w-min p-leanring bg-yellow rounded text-preset-4 font-extrabold"
+            >Learning</span
+          >
+          <time
+            datetime="2023-12-21"
+            class="text-preset-4 font-medium w-min whitespace-nowrap"
+            >Published 21 Dec 2023
+          </time>
+          <h1
+            id="cardTitle"
+            class="text-preset-1 font-extrabold whitespace-nowrap"
+          >
+            HTML & CSS foundations
+          </h1>
+          <p class="text-preset-3 font-medium">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+        </div>
+        <address class="flex items-center gap-3">
+          <img
+            src="./assets/images/image-avatar.webp"
+            alt="author avatar"
+            class="block w-8 h-8 object-cover"
+          />
+          <p aria-label="author" class="text-preset-3 font-bold not-italic">
+            Greg Hooper
+          </p>
+        </address>
+      </div>
+    </main>
+    <!-- <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </footer> -->
   </body>
 </html>
